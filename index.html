@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Quiz App </title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<script src="script.js"></script>
+
+<body>
+
+    <div id="app">
+        <h1>Quiz App</h1>
+
+        <div id="question-container" class="box">
+            <p id="question-text"> Question will appear here </p>
+        </div>
+
+        <div id="answer-container">
+            <div class="answer-box" data-correct="false"> Answer A </div>
+            <div class="answer-box" data-correct="true"> Answer B (current correct) </div> 
+            <div class="answer-box" data-correct="false"> Answer C </div>
+            <div class="answer-box" data-correct="false"> Answer D </div>
+        </div>
+
+        <div id="feedback-box" class="box">
+            <p id="feedback-text"> Click an answer to begin </p>
+        </div>
+
+        <div id="controls">
+            <button id="prev-btn"> Previous </button>
+            <button id="next-btn"> Next /button>
+            <button id="end-btn"> End Quiz </button>
+        </div>
+
+        <div id="result-container">
+            <div id="score-box" class="box">
+                <p> Score: </p>
+                <p id="score-value"> 0/0 </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
