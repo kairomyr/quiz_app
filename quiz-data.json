@@ -1,0 +1,259 @@
+{
+  "quiz_data": {
+    "questions": [
+      {
+        "id": 1,
+        "question": "According to Roman legend, who was the first king and founder of Rome?",
+        "answer": "Romulus",
+        "pool_type": ["people", "bodies", "titles"]
+      },
+      {
+        "id": 2,
+        "question": "Which conflict, consisting of three separate wars, was fought between Rome and Carthage?",
+        "answer": "The Punic Wars",
+        "pool_type": "conflicts"
+      },
+      {
+        "id": 3,
+        "question": "What was the name of the legislative body of the Roman Republic, composed primarily of aristocrats?",
+        "answer": "The Senate",
+        "pool_type": ["bodies", "titles"]
+      },
+      {
+        "id": 4,
+        "question": "Who led the Carthaginian force that famously crossed the Alps with war elephants to invade Italy?",
+        "answer": "Hannibal Barca",
+        "pool_type": ["people", "bodies", "titles"]
+      },
+      {
+        "id": 5,
+        "question": "What was the term for the common citizens of Rome, distinct from the patricians?",
+        "answer": "Plebeians",
+        "pool_type": ["bodies", "titles"]
+      },
+      {
+        "id": 6,
+        "question": "Which Roman leader was assassinated on the Ides of March in 44 BCE?",
+        "answer": "Julius Caesar",
+        "pool_type": "people"
+      },
+      {
+        "id": 7,
+        "question": "Who was the first official Emperor of Rome, reigning from 27 BCE to 14 CE?",
+        "answer": "Augustus (Octavian)",
+        "pool_type": "people"
+      },
+      {
+        "id": 8,
+        "question": "What was the long period of relative peace and stability across the Roman Empire called?",
+        "answer": "Pax Romana",
+        "pool_type": ["events", "conflicts", "buildings", "misc"]
+      },
+      {
+        "id": 9,
+        "question": "Which architectural structure was used by Romans to transport water from distant sources into cities?",
+        "answer": "Aqueducts",
+        "pool_type": ["buildings", "misc"]
+      },
+      {
+        "id": 10,
+        "question": "Which Emperor famously converted to Christianity?",
+        "answer": "Constantine the Great",
+        "pool_type": ["people", "bodies", "titles"]
+      },
+      {
+        "id": 11,
+        "question": "What was the primary tactical unit of the Roman army, typically consisting of 4,000 to 6,000 soldiers?",
+        "answer": "A Legion",
+        "pool_type": ["bodies", "titles", "military", "buildings", "misc"]
+      },
+      {
+        "id": 12,
+        "question": "Which Roman city was buried and preserved by the eruption of Mount Vesuvius in 79 CE?",
+        "answer": "Pompeii",
+        "pool_type": ["places", "buildings"]
+      },
+      {
+        "id": 13,
+        "question": "What was the name of the defensive fortification built across northern Britain by the Romans?",
+        "answer": "Hadrian’s Wall",
+        "pool_type": ["titles", "places", "buildings"]
+      },
+      {
+        "id": 14,
+        "question": "Which set of laws, inscribed on bronze, formed the foundation of Roman law?",
+        "answer": "The Twelve Tables",
+        "pool_type": ["bodies", "titles", "military", "buildings"]
+      },
+      {
+        "id": 15,
+        "question": "What was the Circus Maximus primarily used for in ancient Rome?",
+        "answer": "Chariot Racing",
+        "pool_type": ["events", "places", "military", "buildings"]
+      },
+      {
+        "id": 16,
+        "question": "Which Emperor is notoriously remembered for his eccentricities and... possibly... making his horse a candidate for office?",
+        "answer": "Caligula",
+        "pool_type": "people"
+      },
+      {
+        "id": 17,
+        "question": "Where was the capital of the Eastern Roman Empire located?",
+        "answer": "Constantinople",
+        "pool_type": ["titles", "places", "buildings"]
+      },
+      {
+        "id": 18,
+        "question": "What was the title given to the two highest-ranking elected officials who governed the Republic?",
+        "answer": "Consuls",
+        "pool_type": ["people", "bodies", "titles"]
+      },
+      {
+        "id": 19,
+        "question": "Which slave and former gladiator led a massive rebellion against the Roman Republic in 73 BCE?",
+        "answer": "Spartacus",
+        "pool_type": ["people", "bodies", "titles"]
+      },
+      {
+        "id": 20,
+        "question": "What is the name of the massive amphitheater used for gladiatorial contests?",
+        "answer": "The Colosseum",
+        "pool_type": ["titles", "places", "buildings"]
+      },
+      {
+        "id": 21,
+        "question": "Which of the following was true about the Roman Empire?",
+        "answer": "DYNAMIC_FACT",
+        "true_pool": "facts",
+        "false_pool": "misconceptions"
+      },
+      {
+        "id": 22,
+        "question_type": "tof",
+        "question": "True or False?: ",
+        "pool_type": "tof_pools"
+      }
+    ],
+    "distractor_pools": {
+      "people": [
+        "Scipio Africanus",
+        "The Gracchi Brothers",
+        "Marcus Aurelius",
+        "Mark Antony",
+        "Cicero",
+        "Pompey the Great",
+        "Diocletian",
+        "Vespasian",
+        "Caligula",
+        "Spartacus",
+        "Constantine the Great",
+        "Augustus (Octavian)",
+        "Julius Caesar",
+        "Hannibal Barca",
+        "Romulus",
+        "Remus"
+      ],
+      "bodies": [
+        "The Triumvirate",
+        "The Tetrarchy",
+        "Vestal Virgins",
+        "Etruscans",
+        "The Senate",
+        "Consuls",
+        "Plebeians",
+        "Patricians"
+      ],
+      "events": [
+        "Chariot Racing",
+        "Pax Romana",
+		"Etruscan Rule",
+		"The Roman Kingdom",
+		"Rule of the Plebeian Council",
+		"Sack of Rome by the Gauls",
+		"Great Fire of Rome",
+		"Crisis of the Third Century",
+		"The Desposition of Augustulus"
+      ],
+      "places": [
+        "Byzantium",
+        "Gaul",
+        "The Tiber River",
+        "The Rubicon",
+        "The Great Wall of China",
+        "A city made entirely of parmesan",
+        "Constantinople",
+        "Hadrian’s Wall",
+        "Pompeii"
+      ],
+      "military": [
+        "The Praetorian Guard",
+        "Centurion",
+        "A legion of Chinese mercenaries",
+        "A Legion"
+      ],
+      "conflicts": [
+        "The Battle of Cannae",
+        "The Battle of Actium",
+        "The Gallic Wars",
+        "The Social War",
+        "The Siege of Wine Palace",
+        "The Punic Wars"
+      ],
+      "buildings": [
+        "The Appian Way",
+        "The Pantheon",
+        "The Baths of Caracalla",
+        "The Cloaca Maxima",
+        "The Colosseum",
+        "Aqueducts"
+      ],
+      "titles": [
+        "Pontifex Maximus",
+        "Equites",
+        "The Emperor of Gambling"
+      ],
+      "misc": [
+        "The Twelve Tables"
+      ]
+    },
+    "tof_pools": {
+      "facts": [
+        "Rome had firefighters",
+        "Purple was a valuable color because it was made from thousands of sea snails",
+        "The Romans made innovations in concrete creation",
+        "Colosseum seating was divided by social class",
+        "The mile measurement originated in Rome",
+        "Vespasian placed a tax on urine collection",
+        "Rome had over 50 thousand miles of paved roads",
+        "Romans viewed left-handedness as evil and unlucky"
+      ],
+      "misconceptions": [
+        "Julius Caesar was born via C-section",
+        "Emperor Augustus was actually three children in a trench coat",
+        "Romulus and Remus were raised by a leopard",
+        "Romans used vomitoriums to throw up during feasts",
+        "Romans wore white togas every day",
+        "The Thumbs Down meant death",
+        "Et tu, Brute? were Caesars actual last words",
+        "The Senate was a democratic body",
+        "Caligula made his horse a Consul",
+        "Aqueducts were used as water slides",
+        "The Senate House was used as a bird sanctuary",
+        "Mount Vesuvius erupted for the drama",
+        "The Circus Maximus was used for unicycle races",
+        "Romans salted the earth of Carthage",
+        "All gladiators fought to the death",
+        "The Punic Wars were fought over a bad joke",
+        "Romans saluted with a straight arm",
+        "Hannibal crossed the Alps on a lion",
+        "Gladiators fought using giant rubber tree branches",
+        "The Fall of Rome happened in a single day",
+        "Christianity was the sole cause of Romes collapse",
+        "Nero played the fiddle during the Great Fire",
+        "Julius Caesar’s favorite food was the Caesar Salad",
+        "The Fall of Rome was caused by a shortage of salted meat"
+      ]
+    }
+  }
+}
