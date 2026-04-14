@@ -1,61 +1,103 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Quiz App </title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
 
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-</head>
+  <script src="script.js"></script>
 
-<script src="script.js"></script>
+  <body>
+    <div
+      id="app"
+      class="bg-dark p-3"
+      style="background: linear-gradient(45deg, #6f42c1, #a29bfe)"
+      ;
+    >
+      <div class="container-fluid">
+        <h1>Quiz App</h1>
 
-<body>
-
-    <div id="app" class="bg-dark p-3" style="background: linear-gradient(45deg, #6f42c1, #a29bfe)" ;>
-        <div class="container-fluid">
-            <h1>Quiz App</h1>
-
-            <div id="question-container" class="box card p-3 mb-2 text-white"
-                style="background-color: #8d3296; border: none;">
-                <p id="question-text"> Question will appear here </p>
-            </div>
-
-            <div id="answer-container">
-                <div class="answer-box card p-3 mb-2 text-white" style="background-color: #c361cc; border: none;"
-                    data-correct="false"> Answer A </div>
-                <div class="answer-box card p-3 mb-2 text-white" style="background-color: #c361cc; border: none;"
-                    data-correct="true"> Answer B (current correct) </div>
-                <div class="answer-box card p-3 mb-2 text-white" style="background-color: #c361cc; border: none;"
-                    data-correct="false"> Answer C </div>
-                <div class="answer-box card p-3 mb-2 text-white" style="background-color: #c361cc; border: none;"
-                    data-correct="false"> Answer D </div>
-            </div>
-
-            <div id="feedback-box" class="box card p-3 mb-2 text-white"
-                style="background-color: #c361cc; border: none;">
-                <p id="feedback-text"> Click an answer to begin </p>
-            </div>
-            
-
-            <div id="controls" class="d-flex justify-content-between mt-4">
-                <button id="start-btn" class="btn btn-outline-light btn-sm">Start Quiz</button>
-                <button id="next-btn" class="btn btn-light btn-sm px-4 fw-bold">Next</button>
-                <button id="end-btn" class="btn btn-danger btn-sm">End Quiz</button>
-            </div>
-
-            <div id="result-container">
-                <div id="score-box" class="box card p-3 mb-2 text-white"
-                    style="background-color: #732386; border: none;">
-                    <p> Score: </p>
-                    <p id="score-value"> 0/0 </p>
-                </div>
-            </div>
+        <div
+          id="question-container"
+          class="box card p-3 mb-2 text-white"
+          style="background-color: #8d3296; border: none"
+        >
+          <p id="question-text">Question will appear here</p>
         </div>
-    </div>
-</body>
 
+        <div id="answer-container">
+          <div
+            class="answer-box card p-3 mb-2 text-white"
+            style="background-color: #c361cc; border: none"
+            data-correct="false"
+          >
+            Answer A
+          </div>
+          <div
+            class="answer-box card p-3 mb-2 text-white"
+            style="background-color: #c361cc; border: none"
+            data-correct="true"
+          >
+            Answer B (current correct)
+          </div>
+          <div
+            class="answer-box card p-3 mb-2 text-white"
+            style="background-color: #c361cc; border: none"
+            data-correct="false"
+          >
+            Answer C
+          </div>
+          <div
+            class="answer-box card p-3 mb-2 text-white"
+            style="background-color: #c361cc; border: none"
+            data-correct="false"
+          >
+            Answer D
+          </div>
+        </div>
+
+        <div
+          id="feedback-box"
+          class="box card p-3 mb-2 text-white"
+          style="background-color: #c361cc; border: none"
+        >
+          <p id="feedback-text">Click an answer to begin</p>
+        </div>
+
+        <div id="controls" class="d-flex justify-content-between mt-4">
+          <button id="prev-btn" class="btn btn-outline-light btn-sm">
+            Previous
+          </button>
+          <button
+            id="next-btn"
+            class="btn btn-light btn-sm px-4 fw-bold"
+            style="display: none"
+          >
+            Next
+          </button>
+          <button id="end-btn" class="btn btn-danger btn-sm">End Quiz</button>
+        </div>
+
+        <div id="result-container">
+          <div
+            id="score-box"
+            class="box card p-3 mb-2 text-white"
+            style="background-color: #732386; border: none"
+          >
+            <p>Score:</p>
+            <p id="score-value">0/0</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
