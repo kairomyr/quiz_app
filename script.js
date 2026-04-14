@@ -91,6 +91,12 @@ document.addEventListener("DOMContentLoaded", function () {
           lastCorrect = isCorrect === "true";
           hasAnswered = true;
 
+          if (lastCorrect) {
+            feedback.textContent = "Correct!";
+          } else {
+            feedback.textContent = "Incorrect!";
+          }
+
           const nextBtn = document.getElementById("next-btn");
           nextBtn.style.display = "block";
         });
