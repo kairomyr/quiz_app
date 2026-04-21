@@ -3,6 +3,34 @@ document.addEventListener("DOMContentLoaded", function () {
   let total = 0;
   let currentQuestionI = 0;
 
+  const toggleBtn = document.getElementById("theme-toggle");
+
+  toggleBtn.addEventListener("click", () => {
+   document.body.classList.toggle("light-mode");
+  });
+
+  const endBtn = document.getElementById("end-btn");
+  const endScreen = document.getElementById("end-screen");
+  const finalScore = document.getElementById("final-score");
+
+endBtn.addEventListener("click", function () {
+  finalScore.textContent = `${correct}/${total}`;
+  endScreen.style.display = "flex";
+});
+
+document.getElementById("restart-btn").addEventListener("click", function () {
+  correct = 0;
+  total = 0;
+  currentQuestionI = 0;
+
+  document.getElementById("score-value").textContent = "0/0";
+  document.getElementById("feedback-text").textContent = "Click an answer to begin";
+
+  endScreen.style.display = "none";
+
+  displayQuestion(currentQuestionI);
+});
+
   fetch("quiz-data.json")
     .then((response) => response.json())
     .then((data) => {
@@ -90,6 +118,16 @@ document.addEventListener("DOMContentLoaded", function () {
           const isCorrect = this.getAttribute("data-correct");
           lastCorrect = isCorrect === "true";
           hasAnswered = true;
+
+          if (lastCorrect) {
+
+          feedback.textContent = "Correct!";
+          feedback.style.color = "limegreen";
+        } else {
+
+          feedback.textContent = "Incorrect!";
+          feedback.style.color = "red";
+        }
 
           const nextBtn = document.getElementById("next-btn");
           nextBtn.style.display = "block";
