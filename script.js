@@ -2,8 +2,12 @@ document.addEventListener("DOMContentLoaded", function () {
   let correct = 0;
   let total = 0;
   let currentQuestionI = 0;
+  let timePerQ = 30;
+  let timerInterval;
 
   const toggleBtn = document.getElementById("theme-toggle");
+  const timerContainer = document.getElementById("timer-container");
+  const countdownText = document.getElementById("countdown-text");
 
   toggleBtn.addEventListener("click", () => {
     document.body.classList.toggle("light-mode");
@@ -15,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
   startBtn.addEventListener("click", function () {
     startScreen.style.display = "none";
     displayQuestion(currentQuestionI);
+    startTimer();
   });
 
   const endBtn = document.getElementById("end-btn");
@@ -34,7 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("score-value").textContent = "0/0";
     document.getElementById("feedback-text").textContent =
       "Click an answer to begin";
-
     endScreen.style.display = "none";
 
     startScreen.style.display = "flex";
@@ -112,6 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
           nextBtn.style.display = "none";
 
           displayQuestion(currentQuestionI);
+          startTimer();
         } else {
           questionElement.textContent = "Quiz Completed!";
           document.querySelector(".answers-container").style.display = "none";
@@ -125,6 +130,9 @@ document.addEventListener("DOMContentLoaded", function () {
       answers.forEach(function (answer) {
         answer.addEventListener("click", function () {
           if (hasAnswered) return;
+
+          clearInterval(timerInterval);
+          timerContainer.classList.remove("timer-active");
 
           const isCorrect = this.getAttribute("data-correct");
           lastCorrect = isCorrect === "true";
@@ -142,5 +150,35 @@ document.addEventListener("DOMContentLoaded", function () {
           nextBtn.style.display = "block";
         });
       });
+
+      function startTimer() {
+        clearInterval(timerInterval);
+        timePerQ = 30;
+        countdownText.textContent = timePerQ;
+
+        timerContainer.classList.add("timer-active");
+
+        timerInterval = setInterval(() => {
+          timePerQ--;
+          countdownText.textContent = timePerQ;
+
+          if (timePerQ <= 0) {
+            clearInterval(timerInterval);
+            timerContainer.classList.remove("timer-active");
+
+            doTimeout();
+          }
+        }, 1000);
+      }
+
+      function doTimeout() {
+        const nextBtn = document.getElementById("next-btn");
+        let hasAnswered = true;
+        let lastCorrect = false;
+        document.getElementById("feedback-text").textContent =
+          "Time has expired, next question...";
+        document.getElementById("feedback-text").style.color = "orange";
+        nextBtn.style.display = "block";
+      }
     });
 });

@@ -21,80 +21,75 @@
       <div>
         <h1>Quiz App</h1>
 
-        <div
-          id="question-container"
-          class="box card p-3 mb-2"
-        >
+        <div id="timer-container" class="timer">
+          <img src="./sprites/romanclocksprite.png" width="20%" />
+          <div>
+            <p id="countdown-text">Timer begins when you do</p>
+          </div>
+        </div>
+
+        <div id="question-container" class="box card p-3 mb-2">
           <p id="question-text">Question will appear here</p>
         </div>
 
         <div id="answer-container">
-          <div
-            class="answer-box card p-3 mb-2"
-            data-correct="false"
-          >
+          <div class="answer-box card p-3 mb-2" data-correct="false">
             Answer A
           </div>
-          <div
-            class="answer-box card p-3 mb-2"
-            data-correct="true"
-          >
+          <div class="answer-box card p-3 mb-2" data-correct="true">
             Answer B (current correct)
           </div>
-          <div
-            class="answer-box card p-3 mb-2"
-            data-correct="false"
-          >
+          <div class="answer-box card p-3 mb-2" data-correct="false">
             Answer C
           </div>
-          <div
-            class="answer-box card p-3 mb-2"
-            data-correct="false"
-          >
+          <div class="answer-box card p-3 mb-2" data-correct="false">
             Answer D
           </div>
         </div>
 
-        <div
-          id="feedback-box"
-          class="box card p-3 mb-2"
-        >
+        <div id="feedback-box" class="box card p-3 mb-2">
           <p id="feedback-text">Click an answer to begin</p>
         </div>
 
         <div id="controls" class="d-flex justify-content-between mt-4">
-          <button id="theme-toggle" class="btn theme-btn btn-sm"> Toggle Visual Mode </button>
+          <button id="theme-toggle" class="btn theme-btn btn-sm">
+            Toggle Visual Mode
+          </button>
           <button
             id="next-btn"
             class="btn btn-light btn-sm px-4 fw-bold"
-            style="display: none"> Next </button>
+            style="display: none"
+          >
+            Next
+          </button>
           <button id="end-btn" class="btn btn-danger btn-sm">End Quiz</button>
         </div>
 
         <div id="result-container">
-          <div
-            id="score-box"
-            class="box card p-3 mb-2"
-          >
+          <div id="score-box" class="box card p-3 mb-2">
             <p>Score:</p>
             <p id="score-value">0/0</p>
           </div>
         </div>
       </div>
 
-      <div id="start-screen" class="end-screen" style="display: flex;">
+      <div id="start-screen" class="end-screen" style="display: flex">
         <div class="end-content">
-            <h2>Welcome to the Quiz</h2>
-            <button id="start-btn" class="btn btn-light btn-sm mt-3">Start</button>
+          <h2>Welcome to the Quiz</h2>
+          <button id="start-btn" class="btn btn-light btn-sm mt-3">
+            Start
+          </button>
         </div>
       </div>
 
       <div id="end-screen" class="end-screen">
-       <div class="end-content">
-        <h2>Quiz Finished</h2>
-         <p id="final-score">0/0</p>
-          <button id="restart-btn" class="btn btn-dark btn-sm mt-3"> Restart</button>
-       </div>
+        <div class="end-content">
+          <h2>Quiz Finished</h2>
+          <p id="final-score">0/0</p>
+          <button id="restart-btn" class="btn btn-dark btn-sm mt-3">
+            Restart
+          </button>
+        </div>
       </div>
     </div>
   </body>
