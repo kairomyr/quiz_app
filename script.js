@@ -162,6 +162,14 @@ document.addEventListener("DOMContentLoaded", function () {
           timePerQ--;
           countdownText.textContent = timePerQ;
 
+          if (timePerQ <= 10) {
+            countdownText.style.color = "red";
+        } else if (timePerQ <= 20) {
+            countdownText.style.color = "orange";
+        } else {
+            countdownText.style.color = "";
+      }
+
           if (timePerQ <= 0) {
             clearInterval(timerInterval);
             timerContainer.classList.remove("timer-active");
